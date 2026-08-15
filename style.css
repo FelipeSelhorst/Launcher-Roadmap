@@ -87,7 +87,7 @@ footer a:hover {
     font-weight: 700;
 }
 
-hr {
+.title hr {
     width: 100%;
     height: 2px;
     border: none;
@@ -237,7 +237,21 @@ hr {
 .progress-fill-1 {
     height: 100%;
     background-color: #FF0066;
+    width: 75%;
+    transition: width 0.4s ease;
+}
+
+.progress-fill-2 {
+    height: 100%;
+    background-color: #FF0066;
     width: 60%;
+    transition: width 0.4s ease;
+}
+
+.progress-fill-3 {
+    height: 100%;
+    background-color: #FF0066;
+    width: 20%;
     transition: width 0.4s ease;
 }
 
@@ -250,6 +264,74 @@ hr {
     font-size: 1.25rem;
     padding: 8px 0;
     border-radius: 5px;
+    text-align: center;
+}
+
+/* COMPLETED Status */
+
+.completed-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+.shipped-version, .shipped-date {
+    background-color: #0c0c0f;
+    height: 40px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.shipped-version {
+    width: 316px;
+}
+
+.shipped-date {
+    width: 128px;
+}
+
+.dashed-line hr {
+    height: 2px;
+    border: none;
+    background-color: transparent;
+    border-radius: 1px;
+    border-top: dashed 2px #666;
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+
+/* DROPPED Status */
+
+.dropped-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+.dropped-reason, .dropped-date {
+    background-color: #0c0c0f;
+    height: 40px;
+    border-radius: 5px;
+    padding: 8px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dropped-reason {
+    width: 329px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.dropped-date {
+    width: 115px;
     text-align: center;
 }
 
