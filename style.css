@@ -68,9 +68,9 @@ footer a:hover {
     gap: 30px;
 }
 
-/* ROADMAP */
+/* CONSIDERING */
 
-.roadmap {
+.considering {
     position: relative;
     padding: 0 0 50px;
 }
@@ -237,14 +237,14 @@ footer a:hover {
 .progress-fill-1 {
     height: 100%;
     background-color: #FF0066;
-    width: 75%;
+    width: 80%;
     transition: width 0.4s ease;
 }
 
 .progress-fill-2 {
     height: 100%;
     background-color: #FF0066;
-    width: 60%;
+    width: 75%;
     transition: width 0.4s ease;
 }
 
@@ -379,6 +379,7 @@ footer {
 
     .page {
         width: min(100% - 20px, 1000px);
+        text-align: center;
     }
 
     .header {
@@ -389,12 +390,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    .roadmap-section {
-        padding: 20px;
-    }
-
-    .roadmap-list,
-    .roadmap-list ul {
-        padding-left: 20px;
+    .wrapper {
+        text-align: left;
     }
 }
