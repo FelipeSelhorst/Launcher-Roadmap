@@ -124,16 +124,6 @@ footer a:hover {
     transform: translateY(-50%);
 }
 
-/* .line {
-    position: absolute;
-    top: 50%;
-    left: calc(25px + 249.5px);
-    right: calc(25px + 249.5px);
-    height: 2px;
-    background-color: #FF0066;
-    z-index: 0;
-} */
-
 /* Card */
 
 .card {
@@ -246,18 +236,11 @@ footer a:hover {
 .progress-fill-1 {
     height: 100%;
     background-color: #FF0066;
-    width: 80%;
-    transition: width 0.4s ease;
-}
-
-.progress-fill-2 {
-    height: 100%;
-    background-color: #FF0066;
     width: 75%;
     transition: width 0.4s ease;
 }
 
-.progress-fill-3 {
+.progress-fill-2 {
     height: 100%;
     background-color: #FF0066;
     width: 5%;
