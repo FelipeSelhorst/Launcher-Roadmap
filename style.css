@@ -17,6 +17,49 @@ body {
 }
 
 
+/* HIATUS */
+
+.hiatus-wrapper {
+    display: flex;
+}
+
+.dismiss-toggle {
+    display: none;
+}
+
+.hiatus-banner {
+    position: sticky;
+    top: 0;
+    padding: 50px 100px;
+    background-color: #1F1F27;
+    z-index: 999;
+}
+
+.dismiss-toggle:checked + .hiatus-banner {
+    display: none;
+}
+
+.hiatus-banner h1 {
+    margin-top: 0;
+}
+
+.close-button {
+    position: absolute;
+    right: 50px;
+
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+}
+
+.close-button:hover {
+    opacity: 1;
+}
+
+
 /* PAGE */
 
 .page {
