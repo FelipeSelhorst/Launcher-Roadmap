@@ -1,10 +1,10 @@
-# Slowpoke Launcher Roadmap
+# Game Launcher Roadmap
 
 This website shows planned features, what has already been completed and what may come in future updates.
 
 ## Main Project
 
-[Slowpoke Launcher](https://github.com/FelipeSelhorst/Game-Launcher)
+[Game Launcher](https://github.com/FelipeSelhorst/Game-Launcher)
 
 ## Contributing
 
