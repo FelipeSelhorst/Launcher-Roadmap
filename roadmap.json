@@ -1,0 +1,126 @@
+[
+    {
+        "id": "library-only",
+        "title": "Library Only",
+        "description": "Option that allows the user to choose between a Library-Only design, or the current design.",
+        "status": "considering",
+        "releaseType": "Release Feature",
+        "statusLabel": "Under Evaluation"
+    },
+    {
+        "id": "choose-widgets",
+        "title": "Choose Your Widgets",
+        "description": "Choose which widgets you want from a collection in the configurations page.",
+        "status": "planned",
+        "releaseType": "Alpha Feature",
+        "quarter": "Q4 • 2026",
+        "statusLabel": "Approach Defined",
+        "difficulty": "Medium"
+    },
+    {
+        "id": "steam-integration",
+        "title": "Steam Integration",
+        "description": "Connect your Steam account and bring your games, playtime and game information into the application.",
+        "status": "planned",
+        "releaseType": "Alpha Feature",
+        "quarter": "Q1 • 2027",
+        "statusLabel": "Creating Solution",
+        "difficulty": "Hard"
+    },
+    {
+        "id": "full-screen",
+        "title": "Full Screen Option",
+        "description": "Design of a new full screen version, and an option to change the resolution.",
+        "status": "planned",
+        "releaseType":"Alpha Feature",
+        "quarter": "Q1 • 2027",
+        "statusLabel": "Creating Solution",
+        "difficulty": "Hard"
+    },
+    {
+        "id": "stylized-indicator",
+        "title": "Stylized Buttons and Indicator",
+        "description": "Visual indicators to help you better see which button is selected.",
+        "status": "progress",
+        "releaseType": "Alpha Feature",
+        "progress": 75
+    },
+    {
+        "id": "page-navigation",
+        "title": "Page Navigation",
+        "description": "Navigate between Home, Library, Settings and their respective subpages.",
+        "status": "progress",
+        "releaseType": "Alpha Feature",
+        "progress": 5
+    },
+    {
+        "id": "home-redesign",
+        "title": "Home Page (Redesign)",
+        "description": "A brand new look to the home page. Much more user-directed than before.",
+        "status": "progress",
+        "releaseType": "Alpha Feature",
+        "progress": 90
+    },
+    {
+        "id": "more-widgets",
+        "title": "More Widgets",
+        "description": "New designs for the Choose Your Widgets planned feature.",
+        "status": "progress",
+        "releaseType": "Alpha Feature",
+        "progress": 30
+    },
+    {
+        "id": "profile-customization",
+        "title": "Profile Flyout and Customization",
+        "description": "Click your profile picture to open a flyout where you can change your photo and name.",
+        "status": "completed",
+        "releaseType": "Alpha Feature",
+        "version": "v0.4.0-alpha.5.0",
+        "shippedDate": "2026-08-18"
+    },
+    {
+        "id": "exit-and-width",
+        "title": "Exit Button and Adjustable Width (Sidebar)",
+        "description": "Click the button in the corner left to close the application immmediately. Drag the vertical line to choose the sidebar width.",
+        "status": "completed",
+        "releaseType": "Alpha Feature",
+        "version": "v0.2.0-alpha.2.0",
+        "shippedDate": "2026-08-12"
+    },
+    {
+        "id": "selection-sidebar",
+        "title": "Selection Indicator (Sidebar)",
+        "description": "A visual indicator to help visualize in which page you currently are on the sidebar.",
+        "status": "completed",
+        "releaseType": "Alpha Feature",
+        "version": "v0.1.0-alpha.1.0",
+        "shippedDate": "2026-08-09"
+    },
+    {
+        "id": "stylized-header",
+        "title": "Stylized Buttons (Header)",
+        "description": "The home page header now has its own working stylized buttons.",
+        "status": "completed",
+        "releaseType": "Alpha Feature",
+        "version": "v0.1.0-alpha.1.0",
+        "shippedDate": "2026-08-09"
+    },
+    {
+        "id": "animated-sidebar",
+        "title": "Animated Buttons (Sidebar)",
+        "description": "The sidebar now has its own animated buttons.",
+        "status": "completed",
+        "releaseType": "Alpha Feature",
+        "version": "v0.1.0-alpha.1.0",
+        "shippedDate": "2026-08-09"
+    },
+    {
+        "id": "music-player",
+        "title": "Built-In Music Player",
+        "description": "A widget that works like a media player, where you can pause, go back and skip anything you are listening to.",
+        "status": "dropped",
+        "releaseType": "Alpha Feature",
+        "reason": "Not Relevant",
+        "date": "Aug 2026"
+    }
+]

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/Logo.ico" type="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Launcher Roadmap</title>
+</head>
+
+<body>
+
+    <div id="hiatus-banner" class="banner">
+        <button id="close-banner-btn" class="close-button" aria-label="Close banner">&times;</button>
+        <h1>HIATUS</h1>
+        <p>
+            <strong>
+                We are pausing the launcher development for a while, along with the roadmap.
+            </strong>
+        </p>
+        <p>
+            Lately, building this launcher has hit a few snags due to my own ongoing learning curve with C# and XAML, and I need to step back for a moment to catch up and build my confidence to guarantee a well-developed application. We don't expect this hiatus to last indefinitely, but upcoming features will be delayed by at least a quarter. Thank you for your patience and support. We'll post another update on github and this notification will be removed when things kick back into gear.
+        </p>
+    </div>
+  
+    <div class="page">
+
+        <!-- HEADER -->
+
+        <div class="header">
+            <h1>
+                The Complete <a href="https://github.com/FelipeSelhorst/Game-Launcher/" target="_blank">
+                    Game Launcher</a>
+                Roadmap
+            </h1>
+
+            <p>Site to keep track of upcoming events.</p>
+        </div>
+
+        <!-- CONSIDERING -->
+
+        <section class="considering">
+    
+            <div class="title">
+                <h1>To Be Considered</h1>
+                <hr>
+                <p>Ideas being evaluated.</p>
+            </div>
+    
+            <div class="wrapper">
+                <div class="boxes" id="considering-cards"></div>
+            </div>
+        </section>
+        
+        
+        <!-- PLANNED -->
+        
+        <section class="planned">
+            <div class="roadmap">
+        
+                <div class="title">
+                    <h1>Planned</h1>
+                    <hr>
+                    <p>Approved features commited to the Roadmap.</p>
+                </div>
+        
+                <div class="wrapper">
+                    <div class="boxes" id="planned-cards"></div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- PROGRESS -->
+        
+        <section class="progress">
+            <div class="roadmap">
+                
+                <div class="title">
+                    <h1>In Progress</h1>
+                    <hr>
+                    <p>Features currently being built.</p>
+                </div>
+                
+                <div class="wrapper">
+                    <div class="boxes" id="progress-cards"></div>
+            
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- COMPLETED -->
+        
+        <section class="completed">
+            <div class="roadmap">
+                
+                <div class="title">
+                    <h1>Completed</h1>
+                    <hr>
+                    <p>Features that have been shipped.</p>
+                </div>
+                
+                <div class="wrapper">
+                    <div class="boxes" id="completed-cards"></div>
+            
+                </div>
+            </div>
+        </section>
+        
+        <div class="dashed-line"><hr></div>
+        
+        <!-- DROPPED -->
+        
+        <section class="dropped">
+            <div class="roadmap">
+                
+                <div class="title">
+                    <h1>Dropped</h1>
+                    <hr>
+                    <p>Features that are no longer planned.</p>
+                </div>
+                
+                <div class="wrapper">
+                    <div class="boxes" id="dropped-cards"></div>
+            
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <span>
+                Powered by
+                <a href="https://github.com/FelipeSelhorst" target="_blank">Felipe Selhorst</a>
+            </span>
+        </footer>
+    
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
