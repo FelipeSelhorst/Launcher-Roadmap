@@ -400,14 +400,19 @@ footer a:hover {
 }
 
 .details {
+    padding: 0;
+    background: none;
+    border: none;
+
     color: #eee;
-    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
     white-space: nowrap;
+    transition: color 0.3s ease;
 }
 
 .details:hover {
     color: #FF0066;
-    transition: 0.5s;
 }
 
 /* FOOTER */
@@ -419,6 +424,140 @@ footer {
 
     color: #666;
     font-size: 0.8rem;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    margin-right: 20px;
+
+    position: relative;
+    z-index: 1;
+
+    width: min(600px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+
+    padding: 35px;
+
+    background: #1F1F27;
+    border: 1px solid #ff0066;
+    border-radius: 20px;
+
+    transform: translateY(15px);
+    transition: transform 0.25s ease;
+}
+
+.modal.open .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #eee;
+    
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.modal-close:hover {
+    opacity: 1;
+    color: #FF0066;
+}
+
+.modal-category {
+    color: #FF0066;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.modal-content h2 {
+    margin: 15px 0;
+    font-size: 1.7rem;
+}
+
+.modal-content p {
+    color: #ccc;
+    line-height: 1.7;
+}
+
+.modal-extra {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.modal-extra-item {
+    margin: 12px 0;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.modal-extra-item strong {
+    color: #eee;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+#modal-done-btn {
+    padding: 10px 20px;
+    background: #FF0066;
+    border: none;
+    border-radius: 6px;
+
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#modal-done-btn:hover {
+    background: #d90057;
 }
 
 
@@ -441,5 +580,15 @@ footer {
 
     .wrapper {
         text-align: left;
+    }
+
+    .modal-content {
+        padding: 28px 20px;
+        max-height: 85vh;
+    }
+
+    .modal-footer {
+        align-items: flex-start;
+        flex-direction: column;
     }
 }

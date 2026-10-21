@@ -2,10 +2,17 @@
     {
         "id": "library-only",
         "title": "Library Only",
-        "description": "Option that allows the user to choose between a Library-Only design, or the current design.",
+        "description": "Keep distractions away by opting for a design that only shows your games.",
         "status": "considering",
         "releaseType": "Release Feature",
-        "statusLabel": "Under Evaluation"
+        "statusLabel": "Under Evaluation",
+        "details": {
+            "overview": "Option that allows the user to choose between a Library-Only design, or the current design.",
+            "features": [
+                "An option that shows only the library."
+            ],
+            "notes": "This would be a toggle option in the configurations page."
+        }
     },
     {
         "id": "choose-widgets",
@@ -15,7 +22,16 @@
         "releaseType": "Alpha Feature",
         "quarter": "Q4 • 2026",
         "statusLabel": "Approach Defined",
-        "difficulty": "Medium"
+        "difficulty": "Hard",
+        "details": {
+            "overview": "Personalize your launcher by selecting the widgets you actually want to use.",
+            "features": [
+                "Enable or disable individual widgets.",
+                "Manage your selection from the configuration page.",
+                "Keep your launcher interface clean and personalized."
+            ],
+            "notes": "The available widgets and final configuration options may change during development."
+        }
     },
     {
         "id": "steam-integration",
@@ -25,7 +41,17 @@
         "releaseType": "Alpha Feature",
         "quarter": "Q1 • 2027",
         "statusLabel": "Creating Solution",
-        "difficulty": "Hard"
+        "difficulty": "Medium",
+        "details": {
+            "overview": "A integration with Steam to get your public data to the application and track your games.",
+            "features": [
+                "Your games automatically ported to the launcher's library.",
+                "Track your friends activity.",
+                "Synchronize your wishlist.",
+                "Track your achievements."
+            ],
+            "notes": "At first, the integration will be to create a structure for the project, and only then it will become user-directioned."
+        }
     },
     {
         "id": "full-screen",
@@ -35,15 +61,38 @@
         "releaseType":"Alpha Feature",
         "quarter": "Q1 • 2027",
         "statusLabel": "Creating Solution",
-        "difficulty": "Hard"
+        "difficulty": "Easy",
+        "details": {
+            "overview": "The launcher was created in a 4:3 design, and will be improved to accept any higher resolution.",
+            "features": [
+                "Go fullscreen mode with one click.",
+                "Change the resolution in the configurations page.",
+                "Add any personalized resolution (needs to be higher than 801x609)."
+            ],
+            "notes": "This is not a priority, so this update could take longer than expected."
+        }
     },
     {
         "id": "stylized-indicator",
-        "title": "Stylized Buttons and Indicator",
+        "title": "Stylized Buttons and Indicator (Header)",
         "description": "Visual indicators to help you better see which button is selected.",
         "status": "progress",
         "releaseType": "Alpha Feature",
-        "progress": 75
+        "progress": 50,
+        "details": {
+            "overview": "Indicators on the button and a sign over the selected one to help you locate.",
+            "features": [
+                "If selected, the buttons have the border thickness increased.",
+                "Hover your cursor over a button and it will change its color."
+            ],
+            "notes": "",
+            "updates": [
+                "[DONE] Increase border thickness if selected",
+                "[DONE] Change color on hover",
+                "[UNDONE] Add the sign over the button",
+                "[UNDONE] Make the sign follow the selected button"
+            ]
+        }
     },
     {
         "id": "page-navigation",
@@ -51,7 +100,26 @@
         "description": "Navigate between Home, Library, Settings and their respective subpages.",
         "status": "progress",
         "releaseType": "Alpha Feature",
-        "progress": 5
+        "progress": 30,
+        "details": {
+            "overview": "The page navigation system that allows you to choose where you want to be.",
+            "features": [
+                "Navigate between three pages and at least three tabs for each."
+            ],
+            "notes": "This feature will take a lot of time to be concluded, since every page needs changes after specific patches.",
+            "updates": [
+                "[DONE] Make the Sidebar",
+                "[DONE] Changed Home to UserControl.",
+                "[DONE] Changed Sidebar to UserControl.",
+                "[UNDONE] Make the Home page",
+                "[UNDONE] Make the Library page",
+                "[UNDONE] Make the Settings design",
+                "[UNDONE] Make the Settings page",
+                "[UNDONE] Make the behind-code for the buttons in the sidebar.",
+                "[UNDONE] Make the Patch Notes tab for the Home page.",
+                "[UNDONE] Make the Performance tab for the Home page."
+            ]
+        }
     },
     {
         "id": "home-redesign",
@@ -59,7 +127,20 @@
         "description": "A brand new look to the home page. Much more user-directed than before.",
         "status": "progress",
         "releaseType": "Alpha Feature",
-        "progress": 90
+        "progress": 66,
+        "details": {
+            "overview": "The old design had lots of useless features. Now, the new design is much more useful and cleaner.",
+            "features": [
+                "2 (default) or more widgets design.",
+                "Bigger widgets to avoid blank spaces."
+            ],
+            "notes": "The previous appearance had design issues and widgets only to fill blank spaces, so we chose to improve it by redesigning this section. Still a subject to change.",
+            "updates": [
+                "[DONE] Increased the first widget's height",
+                "[DONE] 2 widget design option",
+                "[UNDONE] 3 widgets design option"
+            ]
+        }
     },
     {
         "id": "more-widgets",
@@ -67,7 +148,27 @@
         "description": "New designs for the Choose Your Widgets planned feature.",
         "status": "progress",
         "releaseType": "Alpha Feature",
-        "progress": 30
+        "progress": 33,
+        "details": {
+            "overview": "More widgets allows the user to personalize more the launcher and make it feel like their own environment.",
+            "features": [
+                "Recent Achievements widget.",
+                "Pinned Games widget.",
+                "Activity widget.",
+                "Next Goal widget.",
+                "Updates widget.",
+                "Recently Played widget.",
+                "Lists widget.",
+                "What Should I Play? widget."
+            ],
+            "notes": "There will also be an option to create your own widgets in the future.",
+            "updates": [
+                "[DONE] Defined what each widget will be",
+                "[UNDONE] Create a design for each",
+                "[DONE] Designed the Recent Achivements widget",
+                "[DONE] Designed the Pinned Games achievement"
+            ]
+        }
     },
     {
         "id": "profile-customization",
@@ -76,7 +177,16 @@
         "status": "completed",
         "releaseType": "Alpha Feature",
         "version": "v0.4.0-alpha.5.0",
-        "shippedDate": "2026-08-18"
+        "shippedDate": "2026-08-18",
+        "details": {
+            "overview": "",
+            "features": [
+                "Profile flyout.",
+                "Stores the profile image and name locally.",
+                "Accepts any image file format."
+            ],
+            "notes": "Subject to changes, but the main idea is completed."
+        }
     },
     {
         "id": "exit-and-width",
@@ -85,7 +195,15 @@
         "status": "completed",
         "releaseType": "Alpha Feature",
         "version": "v0.2.0-alpha.2.0",
-        "shippedDate": "2026-08-12"
+        "shippedDate": "2026-08-12",
+        "details": {
+            "overview": "",
+            "features": [
+                "Exit button in the corner left.",
+                "Adjustable width for the sidebar."
+            ],
+            "notes": "The width has limits (unable to go less than the default and more than 300px) for development sake. The release version will allow you to toggle it off in the configurations page."
+        }
     },
     {
         "id": "selection-sidebar",
@@ -94,7 +212,15 @@
         "status": "completed",
         "releaseType": "Alpha Feature",
         "version": "v0.1.0-alpha.1.0",
-        "shippedDate": "2026-08-09"
+        "shippedDate": "2026-08-09",
+        "details": {
+            "overview": "",
+            "features": [
+                "A small rectangle on the left that follows the selected page.",
+                "Smooth animation and fixed position."
+            ],
+            "notes": "Probably will change to triangle in the release."
+        }
     },
     {
         "id": "stylized-header",
@@ -103,7 +229,15 @@
         "status": "completed",
         "releaseType": "Alpha Feature",
         "version": "v0.1.0-alpha.1.0",
-        "shippedDate": "2026-08-09"
+        "shippedDate": "2026-08-09",
+        "details": {
+            "overview": "",
+            "features": [
+                "If a button is selected, you will be able to see the border thickness increasing.",
+                "If you hover the button, it will display another color."
+            ],
+            "notes": ""
+        }
     },
     {
         "id": "animated-sidebar",
@@ -112,7 +246,14 @@
         "status": "completed",
         "releaseType": "Alpha Feature",
         "version": "v0.1.0-alpha.1.0",
-        "shippedDate": "2026-08-09"
+        "shippedDate": "2026-08-09",
+        "details": {
+            "overview": "",
+            "features": [
+                "Each button has a scale up animation when hovering with the mouse"
+            ],
+            "notes": ""
+        }
     },
     {
         "id": "music-player",
@@ -121,6 +262,11 @@
         "status": "dropped",
         "releaseType": "Alpha Feature",
         "reason": "Not Relevant",
-        "date": "Aug 2026"
+        "date": "Aug 2026",
+        "details": {
+            "overview": "",
+            "features": [],
+            "notes": "During the design, we realized this widget would be too difficult to do for no reason, so the team decided to abandon this feature."
+        }
     }
 ]

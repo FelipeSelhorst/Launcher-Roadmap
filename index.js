@@ -215,16 +215,15 @@ function createCard(task) {
     );
 
     const details = createElement(
-        "a",
+        "button",
         "details",
         "View Details →"
     );
-    details.href = task.detailsUrl || "#";
-
-    if (task.detailsUrl) {
-        details.target = "_blank";
-        details.rel = "noopener noreferrer";
-    }
+    
+    details.type = "button";
+    details.addEventListener("click", () => {
+        openDetailsModal(task);
+    });
 
     footer.append(details);
 
@@ -234,6 +233,176 @@ function createCard(task) {
 
     return card;
 }
+
+const modal = document.getElementById("details-modal");
+const modalTitle = document.getElementById("modal-title");
+const modalDescription = document.getElementById("modal-description");
+const modalCategory = document.getElementById("modal-category");
+const modalExtra = document.getElementById("modal-extra");
+const modalReleaseType = document.getElementById("modal-release-type");
+
+const closeModalButton = document.getElementById("close-modal-btn");
+const doneModalButton = document.getElementById("modal-done-btn");
+
+function openDetailsModal(task) {
+    
+    const config = statusConfig[task.status];
+
+    if (!modal || !config) return;
+
+    modalTitle.textContent = task.title;
+    modalDescription.textContent = task.details?.overview || task.description;
+
+    modalCategory.textContent = `${config.icon} ${config.label}`;
+
+    modalReleaseType.textContent = task.releaseType || "Alpha Feature";
+
+    modalExtra.replaceChildren();
+
+    const details = task.details || {};
+
+    if (details.features?.length) {
+        const heading = createElement(
+            "h3",
+            "",
+            "Key Features"
+        );
+        const list = createElement(
+            "ul",
+            "modal-extra-item"
+        );
+
+        details.features.forEach(feature => {
+            const item = createElement("li", "", feature);
+            list.append(item);
+        });
+
+        modalExtra.append(heading, list);
+    }
+
+    if (details.updates?.length) {
+        const heading = createElement(
+            "h3",
+            "",
+            "Updates"
+        );
+
+        const list = createElement(
+            "ul",
+            "modal-extra-item"
+        );
+
+        details.updates.forEach(updates => {
+            const item = createElement(
+                "li",
+                "",
+                updates
+            );
+
+            list.append(item);
+        });
+
+        modalExtra.append(heading, list);
+    }
+
+    // Optional development notes
+    if (details.notes) {
+        const heading = createElement("h3", "", "Additional Notes");
+        const notes = createElement(
+            "p",
+            "modal-extra-item",
+            details.notes
+        );
+
+        modalExtra.append(heading, notes);
+    }
+
+    // Status-specific information
+    const statusItems = [];
+
+    if (task.quarter) {
+        statusItems.push(["Target Release", task.quarter]);
+    }
+
+    if (task.difficulty) {
+        statusItems.push(["Difficulty", task.difficulty]);
+    }
+
+    if (task.progress !== undefined) {
+        statusItems.push(["Progress", `${task.progress}%`]);
+    }
+
+    if (task.version) {
+        statusItems.push(["Shipped Version", task.version]);
+    }
+
+    if (task.shippedDate) {
+        statusItems.push(["Shipped Date", task.shippedDate]);
+    }
+
+    if (task.reason) {
+        statusItems.push(["Reason Dropped", task.reason]);
+    }
+
+    if (task.date) {
+        statusItems.push(["Date Dropped", task.date]);
+    }
+
+    if (task.statusLabel) {
+        statusItems.push(["Development Status", task.statusLabel]);
+    }
+
+    if (statusItems.length) {
+        const heading = createElement("h3", "", "Feature Details");
+
+        const list = createElement("div", "modal-extra-item");
+
+        statusItems.forEach(([label, value]) => {
+            const row = createElement("p", "modal-extra-item");
+            const strong = createElement("strong", "", `${label}: `);
+            const text = document.createTextNode(value);
+
+            row.append(strong, text);
+            list.append(row);
+        });
+
+        modalExtra.append(heading, list);
+    }
+
+        // Show the popup
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    closeModalButton.focus();
+}
+
+function closeDetailsModal() {
+    if (!modal) return;
+
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+// Close button
+closeModalButton?.addEventListener("click", closeDetailsModal);
+doneModalButton?.addEventListener("click", closeDetailsModal);
+
+// Close when clicking the backdrop
+modal?.querySelector("[data-close-modal]")
+    ?.addEventListener("click", event => {
+        if (event.target === event.currentTarget) {
+            closeDetailsModal();
+        }
+    });
+
+// Close with Escape
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal?.classList.contains("open")) {
+        closeDetailsModal();
+    }
+});
 
 async function loadRoadmap() {
     try {
@@ -252,22 +421,32 @@ async function loadRoadmap() {
                 container.replaceChildren();
             }
         });
+        tasks
+        
+            .sort((a, b) => {
+                if (a.status !== "progress" || b.status !== "progress") {
+                    return 0;
+                }
 
-        tasks.forEach(task => {
-            const config = statusConfig[task.status];
-            const container = config
-                ? document.getElementById(config.container)
-                : null;
+                return b.progress - a.progress;
+            })
 
-            if (!container) {
-                console.warn(
-                    `Unknown status or missing container for: ${task.title}`
-                );
-                return;
-            }
+            .forEach(task => {
+                const config = statusConfig[task.status];
+                const container = config
+                    ? document.getElementById(config.container)
+                    : null;
 
-            container.append(createCard(task));
-        });
+                if (!container) {
+                    console.warn(
+                        `Unknown status or missing container for: ${task.title}`
+                    );
+                    return;
+                }
+
+                container.append(createCard(task));
+            })
+        
     } catch (error) {
         console.error("Failed to load roadmap:", error);
     }
