@@ -461,7 +461,7 @@ footer {
 .modal-content {
     margin-right: 20px;
 
-    position: relative;
+    position: absolute;
     z-index: 1;
 
     width: min(600px, 100%);
@@ -474,13 +474,17 @@ footer {
     border: 1px solid #ff0066;
     border-radius: 20px;
 
-    transform: translateY(15px);
+    /* transform: translateY(15px); */
     transition: transform 0.25s ease;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.modal.open .modal-content {
+/* .modal.open .modal-content {
     transform: translateY(0);
-}
+} */
 
 .modal-close {
     position: absolute;
