@@ -122,25 +122,26 @@
         }
     },
     {
-        "id": "home-redesign",
-        "title": "Home Page (Redesign)",
-        "description": "A brand new look to the home page. Much more user-directed than before.",
-        "status": "progress",
-        "releaseType": "Alpha Feature",
-        "progress": 66,
-        "details": {
-            "overview": "The old design had lots of useless features. Now, the new design is much more useful and cleaner.",
-            "features": [
-                "2 (default) or more widgets design.",
-                "Bigger widgets to avoid blank spaces."
-            ],
-            "notes": "The previous appearance had design issues and widgets only to fill blank spaces, so we chose to improve it by redesigning this section. Still a subject to change.",
-            "updates": [
-                "[DONE] Increased the first widget's height",
-                "[DONE] 2 widget design option",
-                "[UNDONE] 3 widgets design option"
-            ]
-        }
+      "id": "home-redesign",
+      "title": "Home Page (Redesign)",
+      "description": "A brand new look to the home page. Much more user-directed than before.",
+      "status": "completed",
+      "releaseType": "Alpha Feature",
+      "version": "Design v2.0",
+      "shippedDate": "2026-10-24",
+      "details": {
+        "overview": "The old design had lots of useless features. Now, the new design is much more useful and cleaner.",
+        "features": [
+          "2 (default) or more widgets design.",
+          "Choose your own widgets and home page layout."
+        ],
+        "notes": "The previous appearance had design issues and widgets only to fill blank spaces, so we chose to improve it by redesigning this section. Still a subject to change.",
+        "updates": [
+          "[DONE] Increased the first widget's size",
+          "[DONE] 2 widget design option",
+          "[DONE] 3 widgets design option"
+        ]
+      }
     },
     {
         "id": "more-widgets",

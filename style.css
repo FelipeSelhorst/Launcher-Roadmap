@@ -19,20 +19,20 @@ body {
 
 /* HIATUS */
 
-.banner {
+/* .banner {
     position: sticky;
     top: 0;
     padding: 50px 75px;
     background-color: #1F1F27;
     z-index: 1;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-}
+} */
 
-.banner h1 {
+/* .banner h1 {
     margin-top: 0;
-}
+} */
 
-.close-button {
+/* .close-button {
     position: absolute;
     right: 50px;
 
@@ -46,17 +46,17 @@ body {
 
     opacity: 0.7;
     transition: opacity 0.15s ease;
-}
+} */
 
-.close-button:hover {
+/* .close-button:hover {
     opacity: 1;
-}
+} */
 
-.banner.hidden {
+/* .banner.hidden {
     opacity: 0;
     visibility: hidden;
     display: none;
-}
+} */
 
 
 /* PAGE */

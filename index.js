@@ -452,13 +452,13 @@ async function loadRoadmap() {
     }
 }
 
-const banner = document.getElementById("hiatus-banner");
-const closeButton = document.getElementById("close-banner-btn");
+// const banner = document.getElementById("hiatus-banner");
+// const closeButton = document.getElementById("close-banner-btn");
 
-if (banner && closeButton) {
-    closeButton.addEventListener("click", () => {
-        banner.classList.add("hidden");
-    });
-}
+// if (banner && closeButton) {
+//     closeButton.addEventListener("click", () => {
+//         banner.classList.add("hidden");
+//     });
+// }
 
 loadRoadmap();
